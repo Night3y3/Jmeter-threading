@@ -14,7 +14,7 @@ public class Client{
     InetAddress address = InetAddress.getByName("localhost");
     Socket socket = new Socket(address,port);
     PrintWriter toServer = new PrintWriter(socket.getOutputStream());
-    // PrintWriter converts string to bits in the output stream whichh is from client to server
+    // PrintWriter converts string to bits in the output stream which is from client to server
     BufferedReader fromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
     // BufferedReader converts bits to string in the input stream which is from server to client
     toServer.println("Hello from the client");

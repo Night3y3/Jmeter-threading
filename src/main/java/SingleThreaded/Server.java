@@ -19,7 +19,7 @@ public class Server {
         Socket acceptedConnection = socket.accept();
         System.out.println("Connection established with client " + acceptedConnection.getRemoteSocketAddress());
         PrintWriter toClient = new PrintWriter(acceptedConnection.getOutputStream());
-        // PrintWriter converts string to bits in the output stream whichh is from
+        // PrintWriter converts string to bits in the output stream which is from
         // server to client
         BufferedReader fromClient = new BufferedReader(new InputStreamReader(acceptedConnection.getInputStream()));
         // BufferedReader converts bits to string in the input stream which is from
